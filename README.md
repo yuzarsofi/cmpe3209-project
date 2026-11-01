@@ -1,5 +1,7 @@
 # CMPE3209 proje (G3, RV32IM)
 
+Depo: https://github.com/yuzarsofi/cmpe3209-project (etiket: M1)
+
 - main.c: C programi (SID 5001230017, programda son 9 hane 1230017)
 - out/asm_O0.s, out/asm_O1.s, out/objdump_O0.txt, out/objdump_O1.txt: derleme ciktilari
 - out/iz_O0.txt, out/iz_O1.txt: dinamik instruction izi; out/bellek_*.txt: bellek dokumu
