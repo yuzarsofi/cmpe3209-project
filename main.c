@@ -1,5 +1,5 @@
 /* Yusuf Kemal AKYILDIZ, SID 5001230017 (programda son 9 hane: 1230017), G3 */
-const int SID = 1230017;
+const int SID = 1230017;  // 5001230017 > 2^31-1 (int siniri) oldugu icin son 9 hane kullanildi
 int a[41];
 unsigned int checksum = 0;
 int decrypt_ok = 0;
