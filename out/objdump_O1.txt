@@ -1,0 +1,85 @@
+
+out/main_O1.elf:	file format elf32-littleriscv
+
+Disassembly of section .text:
+
+000110f8 <rotl>:
+   110f8: 93 55 f5 01  	srli	a1, a0, 0x1f
+   110fc: 13 15 15 00  	slli	a0, a0, 0x1
+   11100: 33 65 b5 00  	or	a0, a0, a1
+   11104: 67 80 00 00  	ret
+
+00011108 <main>:
+   11108: 37 f5 6e 3c  	lui	a0, 0x3c6ef
+   1110c: 13 05 f5 35  	addi	a0, a0, 0x35f
+   11110: b7 25 01 00  	lui	a1, 0x12
+   11114: 13 86 c5 21  	addi	a2, a1, 0x21c
+   11118: b7 c5 12 00  	lui	a1, 0x12c
+   1111c: 93 86 15 4c  	addi	a3, a1, 0x4c1
+   11120: b7 65 19 00  	lui	a1, 0x196
+   11124: 93 85 d5 60  	addi	a1, a1, 0x60d
+   11128: 37 a7 d8 09  	lui	a4, 0x9d8a
+   1112c: 13 07 a7 d8  	addi	a4, a4, -0x276
+   11130: 93 07 a0 01  	li	a5, 0x1a
+   11134: 13 08 46 0a  	addi	a6, a2, 0xa4
+
+00011138 <.LBB1_1>:
+   11138: b3 86 b6 02  	mul	a3, a3, a1
+   1113c: b3 86 a6 00  	add	a3, a3, a0
+   11140: 93 d8 06 01  	srli	a7, a3, 0x10
+   11144: b3 b2 e8 02  	mulhu	t0, a7, a4
+   11148: b3 82 f2 02  	mul	t0, t0, a5
+   1114c: b3 88 58 40  	sub	a7, a7, t0
+   11150: 93 88 18 04  	addi	a7, a7, 0x41
+   11154: 23 20 16 01  	sw	a7, 0x0(a2)
+   11158: 13 06 46 00  	addi	a2, a2, 0x4
+   1115c: e3 1e 06 fd  	bne	a2, a6, 0x11138 <.LBB1_1>
+   11160: 37 26 01 00  	lui	a2, 0x12
+   11164: 03 26 46 21  	lw	a2, 0x214(a2)
+   11168: b7 26 01 00  	lui	a3, 0x12
+   1116c: 93 86 c6 21  	addi	a3, a3, 0x21c
+   11170: 13 87 46 0a  	addi	a4, a3, 0xa4
+
+00011174 <.LBB1_3>:
+   11174: 83 a7 06 00  	lw	a5, 0x0(a3)
+   11178: 93 c7 17 0c  	xori	a5, a5, 0xc1
+   1117c: 23 a0 f6 00  	sw	a5, 0x0(a3)
+   11180: 13 58 f6 01  	srli	a6, a2, 0x1f
+   11184: 13 16 16 00  	slli	a2, a2, 0x1
+   11188: 33 66 06 01  	or	a2, a2, a6
+   1118c: 93 86 46 00  	addi	a3, a3, 0x4
+   11190: 33 06 f6 00  	add	a2, a2, a5
+   11194: e3 90 e6 fe  	bne	a3, a4, 0x11174 <.LBB1_3>
+   11198: b7 26 01 00  	lui	a3, 0x12
+   1119c: 23 aa c6 20  	sw	a2, 0x214(a3)
+   111a0: 37 26 01 00  	lui	a2, 0x12
+   111a4: 93 06 c6 21  	addi	a3, a2, 0x21c
+   111a8: 13 06 10 00  	li	a2, 0x1
+   111ac: 37 c7 12 00  	lui	a4, 0x12c
+   111b0: 13 07 17 4c  	addi	a4, a4, 0x4c1
+   111b4: b7 a7 d8 09  	lui	a5, 0x9d8a
+   111b8: 93 87 a7 d8  	addi	a5, a5, -0x276
+   111bc: 13 08 a0 01  	li	a6, 0x1a
+   111c0: 93 88 46 0a  	addi	a7, a3, 0xa4
+
+000111c4 <.LBB1_5>:
+   111c4: 33 07 b7 02  	mul	a4, a4, a1
+   111c8: 33 07 a7 00  	add	a4, a4, a0
+   111cc: 93 52 07 01  	srli	t0, a4, 0x10
+   111d0: 33 b3 f2 02  	mulhu	t1, t0, a5
+   111d4: 83 a3 06 00  	lw	t2, 0x0(a3)
+   111d8: 33 03 03 03  	mul	t1, t1, a6
+   111dc: b3 82 62 40  	sub	t0, t0, t1
+   111e0: 93 82 12 04  	addi	t0, t0, 0x41
+   111e4: 13 c3 13 0c  	xori	t1, t2, 0xc1
+   111e8: 23 a0 66 00  	sw	t1, 0x0(a3)
+   111ec: b3 42 53 00  	xor	t0, t1, t0
+   111f0: b3 32 50 00  	snez	t0, t0
+   111f4: 93 82 f2 ff  	addi	t0, t0, -0x1
+   111f8: 93 86 46 00  	addi	a3, a3, 0x4
+   111fc: 33 f6 c2 00  	and	a2, t0, a2
+   11200: e3 92 16 fd  	bne	a3, a7, 0x111c4 <.LBB1_5>
+   11204: 37 25 01 00  	lui	a0, 0x12
+   11208: 23 2c c5 20  	sw	a2, 0x218(a0)
+   1120c: 13 05 00 00  	li	a0, 0x0
+   11210: 67 80 00 00  	ret
