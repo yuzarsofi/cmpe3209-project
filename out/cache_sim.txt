@@ -1,0 +1,38 @@
+cache: 128 B, line 32 B, direct, 4 line, 4 set; alanlar: tag 25 bit, line 2 bit, word 5 bit; policy write-through
+  # RW adres      tag       line word sonuc cikan blok   daha once cachete miydi
+  1  W 0x7ffefffc 0x0fffdff    3   28 Miss -            hayir
+  2  W 0x7ffefff8 0x0fffdff    3   24 Hit  -            -
+  3  W 0x7ffefff4 0x0fffdff    3   20 Hit  -            -
+  4  W 0x7ffefff0 0x0fffdff    3   16 Hit  -            -
+  5  R 0x7ffefff0 0x0fffdff    3   16 Hit  -            -
+  6  W 0x7ffeffec 0x0fffdff    3   12 Hit  -            -
+  7  W 0x7ffeffe8 0x0fffdff    3    8 Hit  -            -
+  8  R 0x7ffeffe8 0x0fffdff    3    8 Hit  -            -
+  9  R 0x7ffeffec 0x0fffdff    3   12 Hit  -            -
+ 10  W 0x7ffeffec 0x0fffdff    3   12 Hit  -            -
+ 11  R 0x7ffeffec 0x0fffdff    3   12 Hit  -            -
+ 12  R 0x7ffeffe8 0x0fffdff    3    8 Hit  -            -
+ 13  W 0x00012398 0x0000247    0   24 Miss -            hayir
+ 14  R 0x7ffeffe8 0x0fffdff    3    8 Hit  -            -
+ 15  W 0x7ffeffe8 0x0fffdff    3    8 Hit  -            -
+ 16  R 0x7ffeffe8 0x0fffdff    3    8 Hit  -            -
+ 17  R 0x7ffeffec 0x0fffdff    3   12 Hit  -            -
+ 18  W 0x7ffeffec 0x0fffdff    3   12 Hit  -            -
+ 19  R 0x7ffeffec 0x0fffdff    3   12 Hit  -            -
+ 20  R 0x7ffeffe8 0x0fffdff    3    8 Hit  -            -
+ 21  W 0x0001239c 0x0000247    0   28 Hit  -            -
+ 22  R 0x7ffeffe8 0x0fffdff    3    8 Hit  -            -
+ 23  W 0x7ffeffe8 0x0fffdff    3    8 Hit  -            -
+ 24  R 0x7ffeffe8 0x0fffdff    3    8 Hit  -            -
+ 25  R 0x7ffeffec 0x0fffdff    3   12 Hit  -            -
+ 26  W 0x7ffeffec 0x0fffdff    3   12 Hit  -            -
+ 27  R 0x7ffeffec 0x0fffdff    3   12 Hit  -            -
+ 28  R 0x7ffeffe8 0x0fffdff    3    8 Hit  -            -
+ 29  W 0x000123a0 0x0000247    1    0 Miss -            hayir
+ 30  R 0x7ffeffe8 0x0fffdff    3    8 Hit  -            -
+--- 30. referanstan sonra cache ani (hit 27, miss 3, bellege yazma 14) ---
+set/line 0 way 0: valid 1 tag 0x0000247 dirty 0 lru 0
+set/line 1 way 0: valid 1 tag 0x0000247 dirty 0 lru 0
+set/line 2 way 0: valid 0 tag - dirty 0 lru -
+set/line 3 way 0: valid 1 tag 0x0fffdff dirty 0 lru 0
+toplam: referans 1781, hit 1575, miss 206, H = 0.8843, ana bellege yazma 626, sonda kalan dirty line 0

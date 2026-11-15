@@ -96,4 +96,5 @@ def main():
             f.write('%d\t%#x\t%08x\t%s\n' % (c.n, pc, w, asm.get(pc, '?')))
     print('dinamik instruction sayisi (Ic):', c.n)
     import json; json.dump({'mem': {str(k): v for k, v in c.mem.items() if k >= 0x12000 and k < 0x13000}}, open(out + '.mem.json', 'w'))
-main()
+if __name__ == '__main__':
+    main()

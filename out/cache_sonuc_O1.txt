@@ -1,0 +1,14 @@
+kisiye ozel cache (128 B, 32 B line, direct, write-through): ref 208 hit 193 miss 15 H 0.9279 bellege yazma 125
+karsilastirma, write-back olsaydi: bellege yazma 11 (+ sonda kalan dirty line 4)
+T_s = H*T1 + (1-H)*(T1+T2) = 3.5240 cycle; cache yok: 35 cycle; speedup 9.932
+
+4e mapping serisi (line 32 B):
+  Direct               hit  193 miss   15 H 0.9279
+  2-way                hit  189 miss   19 H 0.9087
+  4-way                hit  189 miss   19 H 0.9087
+  Fully assoc. (LRU)   hit  189 miss   19 H 0.9087
+4e line boyu serisi (direct):
+   8 B (16 line)       hit  162 miss   46 H 0.7788
+  16 B ( 8 line)       hit  184 miss   24 H 0.8846
+  32 B ( 4 line)       hit  193 miss   15 H 0.9279
+  64 B ( 2 line)       hit  200 miss    8 H 0.9615

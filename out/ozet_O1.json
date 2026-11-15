@@ -1,0 +1,133 @@
+{
+ "Ic": 1467,
+ "siniflar": {
+  "alu": 889,
+  "mul": 246,
+  "load": 83,
+  "store": 125,
+  "branch": 124
+ },
+ "data_ref": 208,
+ "satir": {
+  "8": {
+   "instr": 123,
+   "alu": 123,
+   "mul": 0,
+   "load": 0,
+   "store": 0,
+   "branch": 0
+  },
+  "11": {
+   "instr": 12,
+   "alu": 12,
+   "mul": 0,
+   "load": 0,
+   "store": 0,
+   "branch": 0
+  },
+  "20": {
+   "instr": 82,
+   "alu": 41,
+   "mul": 0,
+   "load": 0,
+   "store": 0,
+   "branch": 41
+  },
+  "21": {
+   "instr": 82,
+   "alu": 41,
+   "mul": 41,
+   "load": 0,
+   "store": 0,
+   "branch": 0
+  },
+  "22": {
+   "instr": 246,
+   "alu": 123,
+   "mul": 82,
+   "load": 0,
+   "store": 41,
+   "branch": 0
+  },
+  "26": {
+   "instr": 82,
+   "alu": 41,
+   "mul": 0,
+   "load": 0,
+   "store": 0,
+   "branch": 41
+  },
+  "27": {
+   "instr": 128,
+   "alu": 45,
+   "mul": 0,
+   "load": 42,
+   "store": 41,
+   "branch": 0
+  },
+  "28": {
+   "instr": 48,
+   "alu": 47,
+   "mul": 0,
+   "load": 0,
+   "store": 1,
+   "branch": 0
+  },
+  "34": {
+   "instr": 82,
+   "alu": 41,
+   "mul": 0,
+   "load": 0,
+   "store": 0,
+   "branch": 41
+  },
+  "35": {
+   "instr": 86,
+   "alu": 45,
+   "mul": 41,
+   "load": 0,
+   "store": 0,
+   "branch": 0
+  },
+  "36": {
+   "instr": 205,
+   "alu": 123,
+   "mul": 82,
+   "load": 0,
+   "store": 0,
+   "branch": 0
+  },
+  "37": {
+   "instr": 123,
+   "alu": 41,
+   "mul": 0,
+   "load": 41,
+   "store": 41,
+   "branch": 0
+  },
+  "38": {
+   "instr": 164,
+   "alu": 164,
+   "mul": 0,
+   "load": 0,
+   "store": 0,
+   "branch": 0
+  },
+  "43": {
+   "instr": 2,
+   "alu": 1,
+   "mul": 0,
+   "load": 0,
+   "store": 1,
+   "branch": 0
+  },
+  "44": {
+   "instr": 2,
+   "alu": 1,
+   "mul": 0,
+   "load": 0,
+   "store": 0,
+   "branch": 1
+  }
+ }
+}
